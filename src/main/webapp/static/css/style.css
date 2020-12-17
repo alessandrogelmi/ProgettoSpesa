@@ -1,0 +1,534 @@
+:root {
+  font-size: 16px;
+  font-family: "Open Sans";
+  --text-primary: #df49a6;
+  --text-secondary: #df49a6;
+  --bg-primary: #603696;
+  --bg-secondary: #3b136e;
+  --transition-speed: 600ms;
+}
+
+.breadcrumb {
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 4px 10px 31px rgb(0 0 0);
+}
+
+body {
+  color: black;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #6649b8;
+}
+
+main {
+  margin-left: 5rem;
+  padding: 1rem;
+  margin-top: 5rem;
+}
+
+#AllCategories {
+  display: flex;
+}
+
+.main {
+  display: block;
+  overflow: hidden;
+}
+#Categories {
+  display: grid;
+  font-family: "Poppins", sans-serif;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 20px;
+  grid-gap: 40px;
+}
+.card {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 20px;
+  box-shadow: 11px 16px 28px rgba(0, 0, 0, 1.18);
+}
+
+svg#mysvg {
+  width: 2rem;
+  min-width: 2rem;
+  margin: 0px 1px 0px 5px;
+}
+
+.card > svg {
+  width: 2rem;
+  min-width: 2rem;
+  margin: 0px 1.5rem;
+  display: none;
+}
+
+.container {
+  position: static;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+img {
+  display: block;
+  border-radius: 20px 20px 0 0;
+  max-height: 200px;
+  padding-top: 0px;
+}
+.container:after {
+  height: 100%;
+  width: 100%;
+  position: static;
+  top: 0;
+  left: 0;
+  border-radius: 20px 20px 0 0;
+  opacity: 0.7;
+}
+
+.details {
+  padding: 20px 10px;
+}
+.details > h3 {
+  color: #000000;
+  font-weight: 600;
+  font-size: 18px;
+  margin: 10px 0 15px 0;
+}
+.details > p {
+  color: #a0a0a0;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 400;
+}
+.details > a {
+  color: black;
+  text-decoration: auto;
+  float: right;
+}
+
+.details > a:hover {
+  color: #6649b8;
+}
+
+.details > a:visited {
+  color: #df49a6;
+}
+
+.navbar {
+  position: fixed;
+  background-color: var(--bg-primary);
+  transition: width 600ms ease;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  z-index: 10;
+  padding: 0;
+}
+
+.navbar::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+.navbar::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+.navbar::-webkit-scrollbar-thumb {
+  background: #df49a6;
+}
+
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.nav-item#Categories,
+.nav-item#List,
+.nav-item#themeButton {
+  width: 100%;
+  display: block;
+}
+
+.nav-item {
+  width: 100%;
+  display: none;
+}
+
+.row {
+  width: 100%;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  font-size: 16px;
+  color: var(--text-primary);
+  text-decoration: none;
+  filter: grayscale(100%) opacity(0.7);
+  transition: var(--transition-speed);
+}
+
+.nav-link:hover {
+  filter: grayscale(0%) opacity(1);
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+}
+
+.link-text {
+  display: none;
+  margin-left: 1rem;
+}
+
+.nav-link svg {
+  width: 2rem;
+  min-width: 2rem;
+  margin: 0 1.5rem;
+}
+
+.fa-primary {
+  color: yellow;
+}
+
+.fa-secondary {
+  color: rgb(218, 218, 65);
+}
+
+.fa-fruit {
+  color: chartreuse;
+}
+.fa-cheese {
+  color: orange;
+}
+.fa-hamburger {
+  color: rgba(196, 100, 3, 1);
+}
+
+.fa-egg {
+  color: #ececec;
+}
+
+.fa-fish {
+  color: cornflowerblue;
+}
+.fa-soap {
+  color: indianred;
+}
+
+.fa-list {
+  color: hotpink;
+}
+
+.fa-arrow {
+  color: #ff7eee;
+}
+.fa-down {
+  color: black;
+}
+
+.fa-arrow:hover {
+  transform: rotate(90deg);
+}
+
+.fa-primary,
+.fa-secondary,
+.fa-fruit,
+.fa-cheese,
+.fa-hamburger,
+.fa-egg,
+.fa-fish,
+.fa-soap,
+.fa-list,
+.fa-arrow {
+  transition: var(--transition-speed);
+}
+
+.logo {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  font-size: 1.5rem;
+  letter-spacing: 0.3ch;
+  width: 100%;
+}
+
+/*.nav-item#Categories:hover svg{
+  transform: rotate(90deg);
+  transition: var(--transition-speed);
+}*/
+
+.logo svg {
+  transform: rotate(0deg);
+  transition: var(--transition-speed);
+}
+
+.logo-text {
+  display: inline;
+  position: absolute;
+  left: -999px;
+  transition: var(--transition-speed);
+}
+
+.navbar:hover .logo svg {
+  transform: rotate(-1440deg);
+}
+
+.Topbar {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: -webkit-fill-available;
+  margin-left: 5rem;
+  height: 80px;
+  transition: margin 600ms ease;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(
+    90deg,
+    var(--bg-primary) 0%,
+    var(--bg-secondary) 78%
+  );
+  z-index: 10;
+  justify-content: center;
+}
+
+.Topbar a {
+  float: right;
+  display: flex;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 10px;
+  text-decoration: none;
+  font-size: 1.5rem;
+  letter-spacing: 0.3ch;
+}
+
+.Topbar-item {
+  height: 100%;
+}
+
+.Topbar-item:last-child {
+  margin-top: auto;
+}
+
+.Topbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.Topbar li:last-child {
+  margin-left: auto;
+}
+
+.Bottombar {
+  overflow: hidden;
+  transition: margin 600ms ease;
+  align-items: center;
+  background: linear-gradient(
+    90deg,
+    var(--bg-primary) 0%,
+    var(--bg-secondary) 78%
+  );
+  z-index: 10;
+  position: fixed;
+  display: flex;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  width: 100%;
+  height: 55px;
+}
+
+.Bottombar p {
+  float: right;
+  display: flex;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.Bottombar-item {
+  height: 100%;
+}
+
+.Bottombar div {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* Small screens */
+@media only screen and (max-width: 600px) {
+  .Topbar, 
+  .Bottombar  {
+    margin: 0;
+    background-color: var(--bg-secondary);
+    transition: margin 600ms ease;
+  }
+
+  .navbar,
+  .logo  {
+    display: none;
+  }
+
+  main {
+    margin-top: 5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 5rem;
+  }
+  .card {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    flex-direction: row;
+  }
+  .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card > svg ,
+  #MobileTitle{
+    display: block;
+  }
+  .card img {
+    max-height: 150px;
+    max-width: 150px;
+    margin: 22px;
+  }
+
+  #properties,
+  .details a {
+    display: none;
+  }
+
+  .progress-bar{
+    height: 1rem;
+  }
+
+  .progress{
+    width: 10rem;
+  }
+}
+
+/* Large screens */
+@media only screen and (min-width: 600px) {
+  #MobileTitle {
+    display: none;
+  }
+
+  .Topbar {
+    background-color: var(--bg-secondary);
+    transition: margin 600ms ease;
+  }
+  .Bottombar {
+    background-color: var(--bg-secondary);
+    transition: margin 600ms ease;
+  }
+  .navbar {
+    top: 0;
+    width: 5rem;
+    height: calc(100vh - 55px);
+  }
+
+  .navbar:hover {
+    width: 16rem;
+  }
+
+  .navbar:hover .link-text {
+    display: inline;
+  }
+
+  @keyframes slide {
+    0.0% {
+      transform: rotate(0deg) translate(0px);
+      transform-origin: bottom left;
+    }
+    100% {
+      transform: rotate(0deg) translate(0px);
+      transform-origin: bottom left;
+    }
+    49.7% {
+      transform: rotate(0deg) translate(50%);
+      transform-origin: bottom left;
+    }
+  }
+
+  @keyframes slideCarrello {
+    0.0% {
+      transform: rotate(0deg) translate(0px);
+      transform-origin: center;
+    }
+    100% {
+      transform: rotate(360deg) translate(0px);
+      transform-origin: center;
+    }
+    49.7% {
+      transform: rotate(360deg) translate(0px);
+      transform-origin: center;
+    }
+  }
+
+  
+  .progress {
+    width: 10rem;
+  }
+
+  .progress-bar {
+    height: 100%;
+  }
+  .navbar:hover + .Topbar #MobileTitle {
+    animation: slide 2s linear 0s infinite normal none;
+  }
+
+  .navbar:hover + .Topbar #mysvg {
+    animation: slideCarrello 2s linear 0s infinite normal none;
+  }
+
+  .navbar:hover .logo svg {
+    margin-left: 11rem;
+  }
+
+  .navbar:hover .logo-text {
+    left: 0px;
+  }
+
+  .navbar:hover + .Topbar {
+    margin-left: 16rem;
+  }
+
+  #MobileTitle {
+    display: block;
+  }
+}
