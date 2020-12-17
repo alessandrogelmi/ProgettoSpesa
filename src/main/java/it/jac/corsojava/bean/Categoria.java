@@ -1,32 +1,37 @@
 package it.jac.corsojava.bean;
 
-import java.util.HashSet;
-
 public class Categoria {
 	
-	private String tipo;
-	HashSet<String> listaCategoria= new HashSet<String>();
+	private String code;
+	private String descrizione;
+	private String imageURL;
 
-	public Categoria(String tipo) {
+	public Categoria() {
 		
-		this.setTipo(tipo);
-		listaCategoria.add(tipo);
 	}
 
-	public String getTipo() {
-		return tipo;
+	public String getCode() {
+		return code;
 	}
 
-	public void setTipo(String tipo) {
-		this.tipo = tipo;
+	public void setCode(String code) {
+		this.code = code;
 	}
 
-	@Override
-	public String toString() {
-		return "Categoria [tipo=" + tipo + "]";
+	public String getDescrizione() {
+		return descrizione;
 	}
-	
-	
-	
+
+	public void setDescrizione(String descrizione) {
+		this.descrizione = descrizione;
+	}
+
+	public String getImageURL() {
+		return imageURL;
+	}
+
+	public void setImageURL(String imageURL) {
+		this.imageURL = imageURL;
+	}
 	
 }

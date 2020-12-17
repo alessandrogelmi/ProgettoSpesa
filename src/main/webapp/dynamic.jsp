@@ -91,13 +91,13 @@
 		<c:forEach items="${categories}" var="cat">
           <div class="card card1">
             <div class="container">
-              <img src="static/images/${cat.imageUrl}" alt="Frutta" />
+              <img src="static/images/${cat.imageURL}" alt="Frutta" />
             </div>
             <div class="details">
-              <h3>${cat.description}</h3>
-              <p>Descrizione</p>
+            	<p>Descrizione</p>
+              <h3>${cat.descrizione}</h3>
               <hr id="properties" />
-              <h3 id="properties">N. Prodotti: ${cat.productCount}</h3>
+              <h3 id="properties">Codice: ${cat.code}</h3>
               <hr id="properties" />
               <a href="#" id="properties">Vai alla Categoria</a>
               <br />
